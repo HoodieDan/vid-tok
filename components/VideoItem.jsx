@@ -37,7 +37,7 @@ export default function VideoItem ({ item, shouldPlay }) {
 const styles = StyleSheet.create({
     videoContainer: {
         width: Dimensions.get('window').width,
-        height: Dimensions.get('window').height,
+        height: Dimensions.get('window').height - 34,
     },
     video: {
         width: '100%',

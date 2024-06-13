@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react';
 import VideoItem from '../components/VideoItem';
 import { videos } from '../data/videos';
 
-export default function FeedScreen() {
+export default function FeedScreen(props) {
   const [currentViewableItemIndex, setCurrentViewableItemIndex] = useState(0);
   const viewabilityConfig = { viewAreaCoveragePercentThreshold: 50 }
   const onViewableItemsChanged = ({ viewableItems }) => {
