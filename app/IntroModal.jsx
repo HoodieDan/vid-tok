@@ -5,10 +5,10 @@ function IntroModal (props) {
     <Modal visible={props.modalIsVisible} animationType='slide'>
         <SafeAreaView style={styles.modal}>
             <View style={styles.imageContainer}>
-                <Image style={styles.tik} source={require('../assets/tik.png')} />
+                <Image style={styles.tik} source={require('../assets/images/tik.png')} />
             </View>
             <View style={styles.tiktokContainer}>
-                <Image style={styles.tiktok} source={require('../assets/tiktok.png')} />
+                <Image style={styles.tiktok} source={require('../assets/images/tiktok.png')} />
             </View>
             <Text style={styles.header}>Video Scroll Demo!</Text>
             <Text style={styles.paragraph}>This is a Tiktok video scroll demo application.</Text>

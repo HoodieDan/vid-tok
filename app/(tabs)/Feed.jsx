@@ -1,10 +1,9 @@
 import { View, FlatList, StyleSheet } from 'react-native';
-import React, { useCallback, useRef, useState } from 'react';
-import VideoItem from '../VideoItem';
+import React, { useRef, useState } from 'react';
+import VideoItem from '../../components/VideoItem';
 import { videos } from '../../data/videos';
-import { useFocusEffect } from 'expo-router';
 
-export default function FeedScreen() {
+function FeedScreen() {
   const [currentViewableItemIndex, setCurrentViewableItemIndex] = useState(0);
   const viewabilityConfig = { viewAreaCoveragePercentThreshold: 50 }
   const onViewableItemsChanged = ({ viewableItems }) => {
@@ -13,15 +12,6 @@ export default function FeedScreen() {
     }
   }
   const viewabilityConfigCallbackPairs = useRef([{ viewabilityConfig, onViewableItemsChanged }])
-  const [ pause, setPause ] = useState(false);
-
-  useFocusEffect(
-    useCallback(() => {
-      return () => {
-        setPause(true);
-      }
-    }, [pause])
-  )
 
   return (
     <View style={styles.container}>
@@ -39,6 +29,8 @@ export default function FeedScreen() {
     </View>
   );
 }
+
+export default FeedScreen;
 
 const styles = StyleSheet.create({
     container: {

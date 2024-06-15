@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View, Image } from 'react-native'
 import React, { Fragment } from 'react'
-import { Tabs, Redirect } from 'expo-router'
-import home from '../../assets/home.png'
-import saved from '../../assets/bookmark.png'
-import profile from '../../assets/profile.png'
-import search from '../../assets/search.png'
+import { Tabs } from 'expo-router'
+import home from '../../assets/images/home.png'
+import saved from '../../assets/images/bookmark.png'
+import profile from '../../assets/images/profile.png'
+import search from '../../assets/images/search.png'
 
 const TabIcon = ({ icon, color }) => {
     return (
